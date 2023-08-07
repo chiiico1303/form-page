@@ -2,38 +2,32 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 :root {
   font-size: 10px;
 }
 
-.container {
-  height: 100vh;
-  width: 100%;
-  font-family: "Roboto", sans-serif;
+body {
   background-image: url(./img/bg.png);
+  display: flex;
+  height: 100vh;
+  width: 100vw;
   background-size: cover;
   text-align: center;
   color: #fff;
-  /*border: 1px solid red;*/
 }
 
-.cadastro {
-  margin-right: 40%;
-  padding-top: 8%;
-}
-
-form {
+.container {  
+  margin-left: 15%;
   display: grid;
   place-items: center;
-  gap: 20px;
+  /*border: 1px solid red;*/
 }
 
 .container h3 {
   font-size: 1.4rem;
-  margin-right: 40%;
-  padding-top: 2%;
 }
 
 span {
@@ -43,17 +37,37 @@ span {
 
 .cadastro h1 {
   font-size: 3.6rem;
-  font-weight: 600;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
-.cadastro input {
-  width: 40%;
+form {
+  display: grid;
+  place-items: center;
+  gap: 10px;
+}
+
+input[type=text], input[type=email], input[type=password] {
+  width: 80%;
   height: 56px;
   border-radius: 10px;
   font-size: 2rem;
   border: 2px solid #8d4fff;
-  padding-left: 20px;
+  padding-left: 10px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+input[type="checkbox"] {
+  width: 40px;
+  height: 40px;
+}
+
+label {
+  font-size: 1.2rem;  
 }
 
 .cadastro button {
@@ -71,95 +85,30 @@ span {
   background: #742df6;
 }
 
-.checkbox {
-  display: flex;
-  align-items: center;
-
-  text-align: left;
-}
-
-input[type="checkbox"] {
-  height: 20px;
-  width: 2rem;
-
-  border: 2px solid #8d4fff;
-  margin: 0 10px;
-}
-
 .social-midia h3 {
-  margin-left: 0;
-  margin: 2% 0;
   font-size: 1.4rem;
+  margin-bottom: 10px;
 }
 
-.social-midia div {
+.social-midia i {
   font-size: 4rem;
-  display: inline-flex;
   margin: 0 10px;
   cursor: pointer;
 }
 
-.social-midia div:hover {
+.social-midia i:hover {
   color: #8d4fff;
 }
 
+
 @media only screen and (max-width: 700px) {
-  .container {
-    background-position: 58%;
-    /*border: 1px solid red;*/
+  body {
+    background-position: 53%;
   }
 
-  .container h3 {
-    font-size: 1.4rem;
-    margin-right: 0%;
-    padding-top: 5%;
+  .container {  
+    margin: 0;
   }
 
-  .cadastro {
-    margin-right: 0%;
-  }
-
-  .cadastro h1 {
-    /*color: #000;*/
-    margin: 50px;
-  }
-
-  .cadastro input {
-    /*background: #000;
-    color: #fff;*/
-    width: 70%;
-    height: 48px;
-    border: 2px solid #8d4fff;
-    padding: 0 20px;
-  }
-
-  .cadastro button {
-    /*color: #000;*/
-    width: 50%;
-    height: 48px;
-  }
-
-  .cadastro a {
-    color: #8d4fff;
-    text-decoration: none;
-    font-size: 1.4rem;
-  }
-
-  .checkbox {
-    justify-content: center;
-  }
-
-  input[type="checkbox"] {
-    height: 25px;
-    width: 2rem;
-  }
-
-  label {
-    font-size: 1.2rem;
-    width: 50%;
-  }
-  
-  .social-midia h3 {
-    margin: 3% 0;
-  }
 }
+
